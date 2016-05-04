@@ -3205,7 +3205,7 @@ main (int argc, char **argv)
   if (!hosts_count)
     return (EXIT_SUCCESS);
 
-  /* Handle special case exceptions */
+  /* Handle special case exception */
   if (prog_data.args->read_fru && hosts_count > 1)
     {
       fprintf (stderr,
