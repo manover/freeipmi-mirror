@@ -1,3 +1,9 @@
+FreeIPMI 1.6.1 - 03/01/14
+-------------------------
+o Legacy -f short option for --flush-cache and -Q short option for
+  quiet-cache.  Backwards compatible for tools that supported it
+  before.
+
 FreeIPMI 1.5.5 - 11/02/16
 -------------------------
 o Fix invalid flag clear in libipmiconsole that can lead to a potential
@@ -48,7 +54,7 @@ o Support --read-fru, --write-fru, and --device-id option in
 o Support --fru-file option in ipmi-fru.
 o Various library updates in libfreeipmi to handle new features.
 
-FreeIPMI 1.5.1 - 12/01/15
+FreeIPMI 1.5.1 - 03/01/14
 -------------------------
 o Update Intel Node Manager support for 3.0 specification.
   - Update API and fiid templates in libfreeipmi.
