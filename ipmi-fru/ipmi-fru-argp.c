@@ -96,7 +96,7 @@ static struct argp_option cmdline_options[] =
       "Skip FRU checksum checks", 42},
     { "bridge-fru", BRIDGE_FRU_KEY, 0, 0,
       "Bridge to read FRU entries on other controllers", 43},
-    { "interpret-oem-data", INTERPRET_OEM_DATA, NULL, 0,
+    { "interpret-oem-data", INTERPRET_OEM_DATA_KEY, NULL, 0,
       "Attempt to interpret OEM data.", 44},
     { "fru-file", FRU_FILE_KEY, "FILENAME", 0,
       "Output from specified FRU binary file.", 45},
@@ -158,7 +158,7 @@ cmdline_parse (int key, char *arg, struct argp_state *state)
     case BRIDGE_FRU_KEY:
       cmd_args->bridge_fru = 1;
       break;
-    case INTERPRET_OEM_DATA:
+    case INTERPRET_OEM_DATA_KEY:
       cmd_args->interpret_oem_data = 1;
       break;
     case FRU_FILE_KEY:

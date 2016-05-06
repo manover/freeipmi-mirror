@@ -51,7 +51,7 @@ enum ipmi_fru_argp_option_keys
     /* legacy */
     SKIP_CHECKS_KEY = 's',
     BRIDGE_FRU_KEY = 160,
-    INTERPRET_OEM_DATA = 161,
+    INTERPRET_OEM_DATA_KEY = 161,
     FRU_FILE_KEY = 162,
   };
 
