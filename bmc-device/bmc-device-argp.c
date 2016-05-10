@@ -143,8 +143,6 @@ static struct argp_option cmdline_options[] =
       "Specify device-id for --read-fru or --write-fru.", 70},
     { "verbose", VERBOSE_KEY, 0, 0,
       "Increase verbosity in output.", 71},
-    { "device-id", DEVICE_ID_KEY, "IDNUM", 0,
-      "Specify device-id for --read-fru or --write-fru.", 69},
     { NULL, 0, NULL, 0, NULL, 0}
   };
 
