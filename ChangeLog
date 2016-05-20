@@ -133,6 +133,15 @@
 
         * Tagged freeipmi-1-5-2
 
+2016-05-20 Albert Chu <chu11@llnl.gov>
+
+	* libfreeipmi/spec/enterprise-numbers.pl: Handle header and all
+	corner cases in enterprise-numbers records list to avoid having to
+	hand modify.
+
+	* libfreeipmi/spec/generate-enterprise-numbers-file.sh: New file
+	to automatically download and generate C file.
+	
 2016-05-10 Albert Chu <chu11@llnl.gov>
 
 	* bmc-device/: Support --read-fru and --device-id option.
