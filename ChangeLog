@@ -1,5 +1,9 @@
 2016-11-02 Albert Chu <chu11@llnl.gov>
 
+	* libfreeipmi/include/freeipmi/spec/ipmi-iana-enterprise-numbers-spec.h:
+	Add macro for maximum IANA numbers.
+	
+
 	* Tagged freeipmi-1-5-5
 
 2016-11-02 Albert Chu <chu11@llnl.gov>
