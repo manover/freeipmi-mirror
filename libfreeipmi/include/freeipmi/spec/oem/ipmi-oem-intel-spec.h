@@ -112,6 +112,8 @@ extern "C" {
 
 #define IPMI_OEM_INTEL_OEM_SPECIFIC_SERVICES_KVM 0x80
 
+#define IPMI_OEM_INTEL_OEM_SPECIFIC_SERVICES_KVM 0x80
+
 #ifdef __cplusplus
 }
 #endif

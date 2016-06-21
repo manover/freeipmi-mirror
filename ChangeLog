@@ -1,5 +1,15 @@
 2016-11-02 Albert Chu <chu11@llnl.gov>
 
+	* libfreeipmi/include/freeipmi/spec/oem/ipmi-oem-intel-spec.h: Add
+	forgotten OEM macro.
+
+2016-06-08 Albert Chu <chu11@llnl.gov>
+
+	* libfreeipmi/include/freeipmi/spec/ipmi-comp-code-spec.h: Fix
+	invalid completion code values for set session privilege macros.
+
+2016-06-06 Albert Chu <chu11@llnl.gov>
+
 	* ipmiconsole/ipmiconsole-argp.c, man/ipmiconsole.8.pre.in:
 	Clarify use of --debugfile option.
 
