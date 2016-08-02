@@ -1,3 +1,17 @@
+2016-08-02 Albert Chu <chu11@llnl.gov>
+	
+	* ipmi-oem/: Add Gigabyte get/set-nic-mode commands.
+
+2016-08-01 Albert Chu <chu11@llnl.gov>
+
+	* common/toolcommon/tool-sensor-common.h: Increase max sensor
+	types to 128.
+
+2016-08-01 Thomas Grohmann <thomas.grohmann@atos.net>
+
+	* common/toolcommon/tool-sensor-common.h: Increase max record ids
+	to 4096.
+
 2016-07-29 Albert Chu <chu11@llnl.gov>
 
 	* libfreeipmi/include/spec/: Add Gigabyte IANA manufacturer macro
