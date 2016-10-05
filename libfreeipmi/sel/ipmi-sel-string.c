@@ -574,7 +574,6 @@ _get_sensor_reading (ipmi_sel_ctx_t ctx,
   else
     abbreviated_units = 1;
 
-  memset (sensor_units_buf, '\0', sensor_units_buflen);
   sensor_units_ret = ipmi_sensor_units_string (sensor_units_percentage,
                                                sensor_units_modifier,
                                                sensor_units_rate,
@@ -1073,7 +1072,7 @@ _output_event_data1 (ipmi_sel_ctx_t ctx,
                      struct sel_string_oem *sel_string_oem)
 {
   struct ipmi_sel_system_event_record_data system_event_record_data;
-  char tmpbuf[EVENT_BUFFER_LENGTH];
+  char tmpbuf[EVENT_BUFFER_LENGTH + 1];
   int output_flag = 0;
   int ret;
 
@@ -1091,7 +1090,7 @@ _output_event_data1 (ipmi_sel_ctx_t ctx,
   if (sel_get_system_event_record (ctx, sel_entry, &system_event_record_data) < 0)
     return (-1);
 
-  memset (tmpbuf, '\0', EVENT_BUFFER_LENGTH);
+  memset (tmpbuf, '\0', EVENT_BUFFER_LENGTH + 1);
 
   switch (ipmi_event_reading_type_code_class (system_event_record_data.event_type_code))
     {
@@ -1271,7 +1270,7 @@ _output_event_data2 (ipmi_sel_ctx_t ctx,
                      struct sel_string_oem *sel_string_oem)
 {
   struct ipmi_sel_system_event_record_data system_event_record_data;
-  char tmpbuf[EVENT_BUFFER_LENGTH];
+  char tmpbuf[EVENT_BUFFER_LENGTH + 1];
   int no_output_flag = 0;
   int output_flag = 0;
   int ret;
@@ -1290,7 +1289,7 @@ _output_event_data2 (ipmi_sel_ctx_t ctx,
   if (sel_get_system_event_record (ctx, sel_entry, &system_event_record_data) < 0)
     return (-1);
 
-  memset (tmpbuf, '\0', EVENT_BUFFER_LENGTH);
+  memset (tmpbuf, '\0', EVENT_BUFFER_LENGTH + 1);
 
   switch (ipmi_event_reading_type_code_class (system_event_record_data.event_type_code))
     {
@@ -1656,7 +1655,7 @@ _output_event_data3 (ipmi_sel_ctx_t ctx,
                      struct sel_string_oem *sel_string_oem)
 {
   struct ipmi_sel_system_event_record_data system_event_record_data;
-  char tmpbuf[EVENT_BUFFER_LENGTH];
+  char tmpbuf[EVENT_BUFFER_LENGTH + 1];
   int no_output_flag = 0;
   int output_flag = 0;
   int ret;
@@ -1675,7 +1674,7 @@ _output_event_data3 (ipmi_sel_ctx_t ctx,
   if (sel_get_system_event_record (ctx, sel_entry, &system_event_record_data) < 0)
     return (-1);
 
-  memset (tmpbuf, '\0', EVENT_BUFFER_LENGTH);
+  memset (tmpbuf, '\0', EVENT_BUFFER_LENGTH + 1);
 
   switch (ipmi_event_reading_type_code_class (system_event_record_data.event_type_code))
     {
@@ -2164,7 +2163,7 @@ _output_event_data2_previous_state_or_severity (ipmi_sel_ctx_t ctx,
   struct ipmi_sel_system_event_record_data system_event_record_data;
   uint8_t previous_offset_from_event_reading_type_code;
   uint8_t offset_from_severity_event_reading_type_code;
-  char tmpbuf[EVENT_BUFFER_LENGTH];
+  char tmpbuf[EVENT_BUFFER_LENGTH + 1];
   char tmpstatebuf[EVENT_BUFFER_LENGTH];
   int no_output_flag = 0;
   int output_flag = 0;
@@ -2190,7 +2189,7 @@ _output_event_data2_previous_state_or_severity (ipmi_sel_ctx_t ctx,
                                        &offset_from_severity_event_reading_type_code) < 0)
     return (-1);
 
-  memset (tmpbuf, '\0', EVENT_BUFFER_LENGTH);
+  memset (tmpbuf, '\0', EVENT_BUFFER_LENGTH + 1);
 
   if ((ipmi_event_reading_type_code_class (system_event_record_data.event_type_code) == IPMI_EVENT_READING_TYPE_CODE_CLASS_GENERIC_DISCRETE
        || ipmi_event_reading_type_code_class (system_event_record_data.event_type_code) == IPMI_EVENT_READING_TYPE_CODE_CLASS_SENSOR_SPECIFIC_DISCRETE)
