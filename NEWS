@@ -2,6 +2,9 @@ FreeIPMI 1.6.1 - 03/01/14
 -------------------------
 o Add IPv6 hostname support to FreeIPMI, all of FreeIPMI can now take
   IPv6 addresses as inputs to "host" parameters, options, or inputs.
+o Support some IPv6 configuration in ipmi-config.
+o Support significant portions of IPMI IPv6 configuration in
+  libfreeipmi.
 o Add --no-session option in ipmi-raw.
 o Add SDR cache options to ipmi-config.
 o Legacy -f short option for --flush-cache and -Q short option for
@@ -71,7 +74,7 @@ o Support --read-fru, --write-fru, and --device-id option in
 o Support --fru-file option in ipmi-fru.
 o Various library updates in libfreeipmi to handle new features.
 
-FreeIPMI 1.5.1 - 03/01/14
+FreeIPMI 1.5.1 - 12/01/15
 -------------------------
 o Update Intel Node Manager support for 3.0 specification.
   - Update API and fiid templates in libfreeipmi.
